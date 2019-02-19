@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Taula
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Taula\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=g
+comment1.target=Taula(int)
+comment2.params=a
+comment2.target=boolean\ add(Ficha)
+comment3.params=x\ y
+comment3.target=Ficha\ getFicha(int,\ int)
+comment4.params=x\ y
+comment4.target=void\ setCasellaANull(int,\ int)
+comment5.params=
+comment5.target=void\ draw()
+comment6.params=a
+comment6.target=int\ comprovarVertical(Ficha)
+comment6.text=\r\n\ Comprova\ verticalment\ si\ hi\ ha\ algun\ equip\ guanyador.\ Torna\ 1\ si\ guanya\ l'equip1,\ torna\ 2\ si\ guanya\r\n\ l'equip\ 2,\ i\ torna\ 0\ si\ no\ guanya\ cap.\r\n
+comment7.params=a
+comment7.target=int\ comprovarHorizontal(Ficha)
+comment7.text=\r\n\ Comprova\ horizontalment\ si\ hi\ ha\ algun\ equip\ guanyador.\ Torna\ 1\ si\ guanya\ l'equip1,\ torna\ 2\ si\ guanya\r\n\ l'equip\ 2,\ i\ torna\ 0\ si\ no\ guanya\ cap.\r\n
+comment8.params=a
+comment8.target=int\ comprovarDiagonal(Ficha)
+comment8.text=\r\n\ Comprova\ en\ les\ diagonals\ si\ hi\ ha\ algun\ equip\ guanyador.\ Torna\ 1\ si\ guanya\ l'equip1,\ torna\ 2\ si\ guanya\r\n\ l'equip\ 2,\ i\ torna\ 0\ si\ no\ guanya\ cap.\r\n
+comment9.params=a
+comment9.target=int\ comprovar(Ficha)
+comment9.text=\r\n\ Comprova\ si\ hi\ ha\ algun\ equip\ guanyador.\ Torna\ 1\ si\ guanya\ l'equip1,\ torna\ 2\ si\ guanya\r\n\ l'equip\ 2,\ torna\ 0\ si\ no\ guanya\ cap,\ i\ torna\ 3\ si\ hi\ ha\ empat(taula\ completada)\r\n
+numComments=10

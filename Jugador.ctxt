@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Jugador
+comment0.text=\n\ Write\ a\ description\ of\ class\ Jugador\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=n\ c
+comment1.target=Jugador(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getCaracter()
+comment3.params=
+comment3.target=java.lang.String\ getNick()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

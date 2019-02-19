@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Ficha
+comment0.text=\n\ Write\ a\ description\ of\ class\ Ficha\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=abs\ e\ c
+comment1.target=Ficha(int,\ int,\ java.lang.String)
+comment2.params=o
+comment2.target=boolean\ equals(java.lang.Object)
+comment3.params=
+comment3.target=int\ getX()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=
+comment5.target=int\ getEquip()
+comment6.params=
+comment6.target=int\ getY()
+comment7.params=o
+comment7.target=void\ setY(int)
+numComments=8
