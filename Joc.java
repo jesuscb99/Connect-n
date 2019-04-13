@@ -9,31 +9,28 @@ import java.util.Scanner;
  */
 public class Joc
 {   
-    
-     
+
     public static void main(String[] args) {
         int tir = 1;
         int joc = 1;
-        
+
         Scanner tec = new Scanner(System.in);
-        
+
         System.out.println("Benvingut al Connecta 4");
-        
+
         System.out.println("Quants jugadors sou?");
-        
-        
+
         int nombreJugadors = tec.nextInt();
         Jugador[] llista = new Jugador[nombreJugadors + 1];
-        
-        
+
         
         for(int i = 1; i <= nombreJugadors; i++) {
-            
+
             if(i == 1) {
                 tec.nextLine();
                 System.out.println("Jugador" + i + ", introdueix el teu nick");
                 String nick = tec.nextLine();
-                
+
                 String caracter;
                 do{
                     System.out.println("Ara el teu caracter per a la fitxa");
@@ -41,8 +38,7 @@ public class Joc
                     caracter = c;
                 }
                 while(caracter.length() != 1);
-                
-                
+
                 caracter = caracter.toUpperCase();
                 Jugador actual = new Jugador(nick, caracter);
                 llista[i] = actual;
@@ -50,7 +46,7 @@ public class Joc
             else {
                 System.out.println("Jugador" + i + ", introdueix el teu nick");
                 String nick = tec.nextLine();
-                
+
                 String caracter;
                 do{
                     System.out.println("Ara el teu caracter per a la fitxa");
@@ -58,71 +54,69 @@ public class Joc
                     caracter = c;
                 }
                 while(caracter.length() != 1);
-                
+
                 caracter = caracter.toUpperCase();
                 Jugador actual = new Jugador(nick, caracter);
                 llista[i] = actual;
             }
-           
+
         }
-        
+
         System.out.println("Llista completada");
-        
+
         System.out.println("Llista de jugadors:");
-        
+
         for(int i = 1; i <= nombreJugadors; i++) {
             System.out.println(i + "." + llista[i].toString());
         }
-        
+
         while(joc == 1) {
             int g = 0;
-             while(g < 4 || g > 99){
+            while(g < 4 || g > 99){
                 System.out.println("Tria una grandaria per a jugar (4 - 99): ");
                 //try{
                 g = tec.nextInt();
-               // }catch(Exception e){
-                  //  System.out.println("Introduix un nombre.");
+                // }catch(Exception e){
+                //  System.out.println("Introduix un nombre.");
             }
-            
+
             System.out.println("ANEM A JUGAR");
-            
+
             Taula a = new Taula(g);
             Ficha actual = new Ficha(0,0,"");
             boolean pas;
-            
+
             a.draw();
             while(tir != 0) {
-                    
-                    String message = "\nTorn de " + llista[tir].toString() ;
-                   
-                    System.out.println(message);
-                    
-                    pas = false;
-                    
+
+                String message = "\nTorn de " + llista[tir].toString() ;
+
+                System.out.println(message);
+
+                pas = false;
+
                 while(pas ==  false) {  
-                    
+
                         
-                        
-                        System.out.println("Coordenada x de la fitxa: ");
-                        int abs = tec.nextInt();
-                        
-                        Ficha j1 = new Ficha(abs,tir, llista[tir].getCaracter());
-                        actual = j1;
-                        if(a.add(j1) == true) { 
-                            pas = true;
-                            a.draw();
-                            
-                        }
-                        
+                    System.out.println("Coordenada x de la fitxa: ");
+                    int abs = tec.nextInt();
+
+                    Ficha j1 = new Ficha(abs,tir, llista[tir].getCaracter());
+                    actual = j1;
+                    if(a.add(j1) == true) { 
+                        pas = true;
+                        a.draw();
+
                     }
-                       
-                    
+
+                }
+
                     
                 int check = a.comprovar(actual);
-                
+
                 if(check != 0) {
                     tir = 0;
-                    
+
                     if(check == -1) {
                         System.out.println("\nFi del joc, heu quedat empatats. Ben jugat per part dels dos");
                     }
@@ -136,16 +130,16 @@ public class Joc
                         tir = 1; 
                     }
                 }
-                }
-            
+            }
+
             int res;
             do{
                 System.out.println("Una revantxa??? \n0.SI\n1.NO"); 
                 res = tec.nextInt();
-                
+
             }
             while(res != 0 && res != 1);
-            
+
             if(res == 1) {
                 joc = 0;
                 System.out.println("Bon Nadal");
@@ -155,7 +149,6 @@ public class Joc
             }
         }
     }
-        }           
-    
+}           
 
 
